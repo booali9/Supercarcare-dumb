@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom DatePicker Dark Theme Styles */
+.dark-theme-calendar {
+  background-color: black !important;
+  border: 1px solid #DC143C !important;
+  border-radius: 8px !important;
+  color: white !important;
+}
+
+.dark-theme-calendar .react-datepicker__header {
+  background-color: #DC143C !important;
+  border-bottom: 1px solid #DC143C !important;
+  color: white !important;
+}
+
+.dark-theme-calendar .react-datepicker__current-month {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.dark-theme-calendar .react-datepicker__day-name {
+  color: #DC143C !important;
+  font-weight: bold !important;
+}
+
+.dark-theme-calendar .react-datepicker__day {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.dark-theme-calendar .react-datepicker__day:hover {
+  background-color: #DC143C !important;
+  color: white !important;
+}
+
+.dark-theme-calendar .react-datepicker__day--selected {
+  background-color: #DC143C !important;
+  color: white !important;
+}
+
+.dark-theme-calendar .react-datepicker__day--keyboard-selected {
+  background-color: #DC143C !important;
+  color: white !important;
+}
+
+.dark-theme-calendar .react-datepicker__day--disabled {
+  color: #666 !important;
+  background-color: transparent !important;
+  cursor: not-allowed !important;
+}
+
+.dark-theme-calendar .react-datepicker__navigation {
+  color: white !important;
+}
+
+.dark-theme-calendar .react-datepicker__navigation:hover {
+  background-color: #DC143C !important;
+}
+
+.dark-theme-calendar .react-datepicker__month-container {
+  background-color: black !important;
+}
+
+/* Disabled date styling */
+.disabled-date {
+  color: #666 !important;
+  background-color: transparent !important;
+  cursor: not-allowed !important;
+}
+
+@font-face {
+  font-family: 'Yumi Normal';
+  src: url('./assets/fonts/Yumi Normal.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  @apply bg-black text-white;
+  background-color: #000000;
+  background-image: linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+    linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}

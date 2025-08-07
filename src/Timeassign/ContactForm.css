@@ -1,0 +1,121 @@
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.form-container {
+  background-color: hsl(222, 47%, 11.2%);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 50px auto;
+  border: 1px solid grey;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between; /* Space between title and back button */
+  align-items: center; /* Vertically center items */
+  margin-bottom: 15px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #58a6ff;
+}
+
+.back-button {
+  background-color: #484f58;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #5a626d;
+}
+
+.form-subtitle {
+  color: #8b949e;
+  margin-bottom: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  background-color: hsl(222, 47%, 11.2%);
+  border: 1px solid #30363d;
+  color: white;
+  border-radius: 5px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.address-section {
+  margin-top: 15px;
+}
+
+.address-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #c9d1d9;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group.small {
+  flex: 1;
+}
+
+.continue-button-container {
+  display: flex;
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Vertically center items */
+  margin-top: 20px;
+}
+
+.continue-button {
+  background-color: #3b82f6; /* Permanent blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background-color: #2563eb; /* Slightly darker blue on hover */
+}
+
+.required-fields-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 10px;
+  text-align: right;
+}

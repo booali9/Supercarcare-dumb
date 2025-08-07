@@ -1,0 +1,40 @@
+/* Header and Navigation Styles */
+
+/* Add padding to body to compensate for fixed header */
+body {
+  padding-top: 0;
+  scroll-padding-top: 80px; /* For smooth scrolling to anchor links */
+}
+
+/* Ensures proper spacing for page content */
+.page-content {
+  padding-top: 1rem;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  body {
+    scroll-padding-top: 60px;
+  }
+}
+
+/* Animation for header appearance/disappearance */
+.header-animation-enter {
+  transform: translateY(-100%);
+}
+.header-animation-enter-active {
+  transform: translateY(0);
+  transition: transform 300ms ease-in-out;
+}
+.header-animation-exit {
+  transform: translateY(0);
+}
+.header-animation-exit-active {
+  transform: translateY(-100%);
+  transition: transform 300ms ease-in-out;
+}
+
+/* Z-index management for dropdown menus */
+.dropdown-menu {
+  z-index: 51;
+}

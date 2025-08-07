@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-maroon-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #1a0a0a;
+  background-image:
+    linear-gradient(to right, rgba(120, 30, 30, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 30, 30, 0.18) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 0;
+}
+
+@keyframes maroon-glow {
+  0%, 100% { opacity: 0.5; filter: blur(60px); }
+  50% { opacity: 0.8; filter: blur(80px); }
+}
+
+.bg-maroon-glow {
+  position: fixed;
+  left: 50vw;
+  top: 60vh;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(220,20,60,0.18) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  animation: maroon-glow 8s ease-in-out infinite;
+}
+
+@font-face {
+  font-family: 'Yumi Normal';
+  src: url('./assets/fonts/Yumi Normal.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  @apply bg-black text-white;
+  background: linear-gradient(180deg, #0a0606 0%, #000 100%);
+} 

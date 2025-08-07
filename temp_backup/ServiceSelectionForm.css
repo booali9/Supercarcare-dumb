@@ -1,0 +1,251 @@
+
+
+
+
+  /* ServiceSelectionForm.css */
+.service-container {
+  padding: 24px;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 60rem;
+  margin: 50px auto;
+  border: 1px solid #374151;
+}
+
+.border-button {
+  border: 2px solid grey;
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.border-button:hover {
+  background-color: #2563EB;
+  color: white;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563EB;
+}
+
+.service-description {
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+.service-card {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #374151;
+}
+
+.service-card:hover {
+  border-color: #3b82f6;
+}
+
+.service-card.selected {
+  background-color: #0c2987;
+  border-color: #3b82f6;
+}
+
+.service-label {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-name {
+  font-weight: bold;
+  color: white;
+}
+
+.service-text {
+  color: #9ca3af;
+}
+
+.service-time {
+  font-size: 0.875rem;
+  color: #2563EB;
+}
+
+.service-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #3b82f6;
+  cursor: pointer;
+  accent-color: #2563EB;
+}
+
+.service-price {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.service-button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.service-button:hover {
+  background-color: #2563eb;
+}
+
+.summary-container {
+  padding: 24px;
+  background-color: #487bea;
+  color: white;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #374151;
+}
+
+.summary-box {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #074de4;
+}
+
+.summary-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: white;
+}
+
+.total {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.summary-note-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.summary-note {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.summary-right {
+  font-size: 0.875rem;
+  color: black;
+  margin-top: 16px;
+  padding: 10px 16px;
+  background-color: #3b82f6;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.summary-button:hover {
+  background-color: #2563eb;
+}
+
+/* Adjustments based on the image */
+.service-container {
+  background-color: #1E293B; /* Darker background */
+  border-color: #374151; /* Darker border */
+}
+
+.service-title {
+  color: #60A5FA; /* Lighter blue for title */
+}
+
+.service-description {
+  color: #9CA3AF; /* Consistent description color */
+}
+
+.service-card {
+  border-color: #374151; /* Dark border for cards */
+}
+
+.service-card:hover, .service-card.selected {
+  border-color: #60A5FA; /* Lighter blue on hover/selected */
+}
+
+.service-card.selected {
+  background-color: #1F2937; /* Darker background when selected */
+}
+
+.service-name {
+  color: #E2E8F0; /* Lighter text for service name */
+}
+
+.service-text {
+  color: #9CA3AF; /* Consistent description color */
+}
+
+.service-time {
+  color: #60A5FA; /* Lighter blue for time */
+}
+
+.service-checkbox {
+  border-color: #60A5FA; /* Lighter blue for checkbox border */
+  accent-color: #60A5FA; /* Lighter blue for checkbox accent */
+}
+
+.summary-box {
+  border-color: #4B5563; /* Darker border for summary box */
+}
+
+.summary-note {
+  color: #9CA3AF; /* Consistent note color */
+}
+
+.summary-right, .service-button {
+  background-color: #2563EB; /* Blue button color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.summary-right:hover, .service-button:hover {
+  background-color: #1D4ED8; /* Darker blue on hover */
+}
+
+/* Adjust button in the summary-note-container */
+.summary-note-container button {
+  background-color: #A1252E;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.summary-note-container button:hover {
+  background-color: #1D4ED8;
+}
