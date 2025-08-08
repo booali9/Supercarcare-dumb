@@ -70,7 +70,7 @@ function Layout({ children, activeStep }) {
         animate={{ opacity: 1, x: 0 }} // End position
         exit={{ opacity: 0, x: -50 }} // Exit animation
         transition={{ duration: 0.4, ease: "easeInOut" }} // Smooth transition
-        className="flex-grow bg-white"
+        className="flex-grow bg-black"
       >
         {children}
       </motion.main>
@@ -230,8 +230,8 @@ function App() {
           }
         />
 
-    <Route path="/shop" element={ <Layout><ServicesPage /></Layout>} />
-    <Route path="/shop/:category" element={<Layout><ServicesPage /></Layout>} />
+{/*    <Route path="/shop" element={ <Layout><ServicesPage /></Layout>} />
+    <Route path="/shop/:category" element={<Layout><ServicesPage /></Layout>} />*/}
 
     <Route 
 

@@ -28,7 +28,7 @@ const SignupModal = ({ open, onClose }) => {
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-      <div className="bg-black rounded-2xl shadow-2xl p-8 w-full max-w-md relative border border-ferrari animate-fadeIn">
+      <div className="bg-black rounded-2xl shadow-2xl p-8 w-full max-w-md relative border border-ferrari/80 animate-fadeIn">
         <button
           className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold focus:outline-none"
           onClick={onClose}
@@ -43,7 +43,7 @@ const SignupModal = ({ open, onClose }) => {
           <form onSubmit={handleSignup} className="space-y-4">
             <input
               type="email"
-              className="w-full border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ferrari text-white placeholder-gray-400 bg-gray-900 text-base"
+              className="w-full border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ferrari/50 text-white placeholder-gray-400 bg-gray-900 text-base"
               placeholder="Email"
               value={email}
               onChange={e => setEmail(e.target.value)}
@@ -51,7 +51,7 @@ const SignupModal = ({ open, onClose }) => {
             />
             <input
               type="password"
-              className="w-full border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ferrari text-white placeholder-gray-400 bg-gray-900 text-base"
+              className="w-full border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ferrari/50 text-white placeholder-gray-400 bg-gray-900 text-base"
               placeholder="Password"
               value={password}
               onChange={e => setPassword(e.target.value)}
@@ -59,16 +59,16 @@ const SignupModal = ({ open, onClose }) => {
             />
             <input
               type="password"
-              className="w-full border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ferrari text-white placeholder-gray-400 bg-gray-900 text-base"
+              className="w-full border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ferrari/50 text-white placeholder-gray-400 bg-gray-900 text-base"
               placeholder="Confirm Password"
               value={confirm}
               onChange={e => setConfirm(e.target.value)}
               required
             />
-            {error && <div className="text-ferrari text-sm">{error}</div>}
+            {error && <div className="text-ferrari/90 text-sm">{error}</div>}
             <button
               type="submit"
-              className="w-full bg-ferrari hover:bg-ferrari/90 text-white py-3 rounded-lg font-bold text-lg mt-2 transition-all duration-150 shadow focus:outline-none focus:ring-2 focus:ring-ferrari focus:ring-offset-2"
+              className="w-full bg-ferrari hover:bg-ferrari/80 text-white py-3 rounded-lg font-bold text-lg mt-2 transition-all duration-150 shadow focus:outline-none focus:ring-2 focus:ring-ferrari/50 focus:ring-offset-2"
             >
               Sign Up
             </button>
@@ -119,7 +119,6 @@ const AppointmentScheduler = () => {
         setError("Please select a time to continue.");
         return;
       }
-      // Check if selected date is in the past
       if (selectedDate < today) {
         setError("Please select a future date.");
         return;
@@ -137,10 +136,10 @@ const AppointmentScheduler = () => {
   return (
     <div className="bg-black bg-gradient-to-b from-[#0a0606] to-black min-h-screen py-10 px-4">
       {/* Name input and OR Signup link above the form */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-2 max-w-3xl mx-auto mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-2 max-w-3xl w-full mx-auto mb-6">
         <input
           type="text"
-          className="w-full sm:w-1/2 border border-ferrari rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-ferrari text-white placeholder-gray-400 bg-black text-base text-center"
+          className="w-full border border-ferrari/50 rounded-lg px-4 py-3 text-base placeholder:text-base focus:outline-none focus:ring-2 focus:ring-ferrari/50 text-white placeholder-gray-400 bg-black text-center"
           placeholder="Your Name"
           value={name}
           onChange={e => setName(e.target.value)}
@@ -149,14 +148,14 @@ const AppointmentScheduler = () => {
         <span className="text-gray-400 text-sm mx-2">or</span>
         <button
           type="button"
-          className="text-ferrari font-semibold underline hover:text-ferrari/80 text-sm"
+          className="text-ferrari/80 font-semibold underline hover:text-ferrari/60 text-sm"
           onClick={() => setShowSignup(true)}
         >
           Signup
         </button>
       </div>
       <SignupModal open={showSignup} onClose={() => setShowSignup(false)} />
-      <div className="p-6 border mt-5 mb-10 border-ferrari rounded-lg shadow-md max-w-3xl mx-auto bg-black text-white">
+      <div className="p-6 border mt-5 mb-10 border-ferrari/50 rounded-lg shadow-md max-w-3xl mx-auto bg-black text-white">
         <div className="flex justify-between items-center mb-6">
           <div>
             <h2 className="text-2xl font-bold text-ferrari">Schedule Your Appointment</h2>
@@ -164,17 +163,17 @@ const AppointmentScheduler = () => {
           </div>
           <button
             onClick={handleBack}
-            className="border border-ferrari font-medium text-sm rounded-md py-2 px-4 hover:bg-ferrari/10 transition-colors text-white"
+            className="border border-ferrari/50 font-medium text-sm rounded-md py-2 px-4 hover:bg-ferrari/10 transition-colors text-white"
           >
             Back
           </button>
         </div>
 
         {/* Toggle Buttons */}
-        <div className="flex bg-black border border-ferrari rounded-lg p-1 mb-6">
+        <div className="flex bg-black border border-ferrari/50 rounded-lg p-1 mb-6">
           <button
             className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-              view === "schedule" ? "bg-ferrari text-white shadow-sm" : "bg-transparent text-white hover:bg-ferrari/10"
+              view === "schedule" ? "bg-ferrari/80 text-white shadow-sm" : "bg-transparent text-white hover:bg-ferrari/10"
             }`}
             onClick={() => {
               setView("schedule");
@@ -185,7 +184,7 @@ const AppointmentScheduler = () => {
           </button>
           <button
             className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-              view === "asap" ? "bg-ferrari text-white shadow-sm" : "bg-transparent text-white hover:bg-ferrari/10"
+              view === "asap" ? "bg-ferrari/80 text-white shadow-sm" : "bg-transparent text-white hover:bg-ferrari/10"
             }`}
             onClick={() => {
               setView("asap");
@@ -196,7 +195,7 @@ const AppointmentScheduler = () => {
           </button>
         </div>
 
-        {error && <p className="text-ferrari text-sm mb-4">{error}</p>}
+        {error && <p className="text-ferrari/90 text-sm mb-4">{error}</p>}
 
         <div className="space-y-6">
           <AnimatePresence mode="wait">
@@ -211,14 +210,14 @@ const AppointmentScheduler = () => {
               >
                 <div>
                   <h3 className="font-semibold text-lg mb-3 text-white">Select a date</h3>
-                  <div className="border border-ferrari rounded-lg p-2 bg-black">
+                  <div className="border border-ferrari/50 rounded-lg p-2 bg-black">
                     <DatePicker
                       selected={selectedDate}
                       onChange={(date) => {
                         setSelectedDate(date);
                         setError("");
                       }}
-                      minDate={today} // Prevent selecting past dates
+                      minDate={today}
                       inline
                       calendarClassName="dark-theme-calendar"
                       dayClassName={(date) => {
@@ -230,7 +229,7 @@ const AppointmentScheduler = () => {
                     />
                   </div>
                   {selectedDate && selectedDate < today && (
-                    <p className="text-ferrari text-sm mt-2">Please select a future date.</p>
+                    <p className="text-ferrari/90 text-sm mt-2">Please select a future date.</p>
                   )}
                 </div>
 
@@ -250,8 +249,8 @@ const AppointmentScheduler = () => {
                           whileTap={{ scale: 0.98 }}
                           className={`py-2 px-3 rounded-md border text-sm ${
                             selectedTime === time
-                              ? "border-ferrari bg-ferrari text-white"
-                              : "border-ferrari/30 text-white hover:border-ferrari/60 bg-black"
+                              ? "border-ferrari/80 bg-ferrari/30 text-white"
+                              : "border-ferrari/30 text-white hover:border-ferrari/50 bg-black"
                           }`}
                           onClick={() => setSelectedTime(time)}
                         >
@@ -265,7 +264,7 @@ const AppointmentScheduler = () => {
                 <div className="flex justify-end">
                   <motion.button
                     onClick={handleContinue}
-                    className="bg-ferrari hover:shadow-[0_0_20px_2px_rgba(255,40,0,0.5)] hover:bg-ferrari/80 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                    className="bg-ferrari/80 hover:shadow-[0_0_20px_2px_rgba(255,40,0,0.3)] hover:bg-ferrari/70 text-white font-medium py-2 px-6 rounded-lg transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -294,8 +293,8 @@ const AppointmentScheduler = () => {
                     <motion.button
                       className={`py-2 px-4 rounded-lg border ${
                         asapDate === "today"
-                          ? "border-ferrari bg-ferrari text-white"
-                          : "border-ferrari/30 text-white hover:border-ferrari/60 bg-black"
+                          ? "border-ferrari/80 bg-ferrari/80 text-white"
+                          : "border-ferrari/30 text-white hover:border-ferrari/50 bg-black"
                       }`}
                       onClick={() => setAsapDate("today")}
                       whileHover={{ scale: 1.02 }}
@@ -306,8 +305,8 @@ const AppointmentScheduler = () => {
                     <motion.button
                       className={`py-2 px-4 rounded-lg border ${
                         asapDate === "tomorrow"
-                          ? "border-ferrari bg-ferrari text-white"
-                          : "border-ferrari/30 text-white hover:border-ferrari/60 bg-black"
+                          ? "border-ferrari/80 bg-ferrari/80 text-white"
+                          : "border-ferrari/30 text-white hover:border-ferrari/50 bg-black"
                       }`}
                       onClick={() => setAsapDate("tomorrow")}
                       whileHover={{ scale: 1.02 }}
@@ -317,14 +316,14 @@ const AppointmentScheduler = () => {
                     </motion.button>
                   </div>
 
-                  <div className="bg-ferrari/10 border-l-4 border-ferrari p-4 mb-6">
+                  <div className="bg-ferrari/10 border-l-4 border-ferrari/80 p-4 mb-6">
                     <p className="text-sm">
-                      <strong className="text-ferrari">Note:</strong> ASAP service is subject to availability. 
+                      <strong className="text-ferrari/90">Note:</strong> ASAP service is subject to availability. 
                       We'll contact you to confirm the exact time once your appointment is submitted.
                     </p>
                   </div>
 
-                  <div className="border border-ferrari rounded-lg p-4 mb-6 bg-black">
+                  <div className="border border-ferrari/50 rounded-lg p-4 mb-6 bg-black">
                     <h4 className="font-medium mb-3 text-white">Your appointment details:</h4>
                     <div className="space-y-2 text-sm">
                       <p><span className="font-medium text-white">Date:</span> {asapDate === "today" ? "Today" : "Tomorrow"}</p>
@@ -341,7 +340,7 @@ const AppointmentScheduler = () => {
                 <div className="flex justify-end">
                   <motion.button
                     onClick={handleContinue}
-                    className="bg-ferrari hover:shadow-[0_0_20px_2px_rgba(255,40,0,0.5)] hover:bg-ferrari/80 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                    className="bg-ferrari/80 hover:shadow-[0_0_20px_2px_rgba(255,40,0,0.3)] hover:bg-ferrari/70 text-white font-medium py-2 px-6 rounded-lg transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
