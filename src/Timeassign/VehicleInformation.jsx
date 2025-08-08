@@ -118,7 +118,7 @@ const VehicleInformation = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black bg-gradient-to-b from-[#0a0606] to-black text-white font-sans">
       {/* Name input and OR Signup link above the form */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-2 max-w-3xl mx-auto mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-center  gap-2 max-w-3xl mx-auto mb-2">
         <input type="text" className="w-full border border-ferrari rounded-lg px-4 py-3 text-base placeholder:text-base focus:outline-none focus:ring-2 focus:ring-ferrari text-white placeholder-gray-400 bg-black text-center" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} required />
         <span className="text-gray-400 text-sm mx-2">or</span>
         <button type="button" className="text-ferrari font-semibold underline hover:text-ferrari/80 text-sm" onClick={() => setShowSignup(true)}>Signup</button>
@@ -269,7 +269,7 @@ const VehicleInformation = () => {
           </button>
         </div>
 
-        <p className="text-center text-xs text-gray-400 mt-4">* Required Fields</p>
+        <p className="text-center text-xs text-gray-400 mt-8">* Required Fields</p>
       </form>
     </div>
   );

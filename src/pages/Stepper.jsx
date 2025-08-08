@@ -3,7 +3,7 @@ import React from "react";
 
 const steps = [
   { path: "/vehicle-info", label: "Vehicle Info" },
-  { path: "/select-services", label: "Services" },
+  { path: "/services", label: "Services" },
   { path: "/scheduler", label: "Schedule" },
   { path: "/review-appointment", label: "Review" },
 ];

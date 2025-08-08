@@ -25,7 +25,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black bg-gradient-to-t from-[#0a0606] to-black border-t border-ferrari py-8 px-4 text-center">
+    <footer className="bg-black bg-gradient-to-t from-[#0a0606] to-black border-t mt-8 border-ferrari py-8 px-4 text-center">
       <div className="max-w-7xl mx-auto">
         <div className="mb-4">
           <h3 className="text-xl font-bold text-ferrari">Supercar Care Center</h3>

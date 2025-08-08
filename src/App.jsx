@@ -53,8 +53,7 @@ function Layout({ children, activeStep }) {
     const isAccount = location.pathname.startsWith("/account");
     const isShop = location.pathname.startsWith("/shop");
     const isWhyUsPage = location.pathname === "/why-us";
-    const isFinancingPage = location.pathname === "/financing";
-    const isServicesPage = location.pathname === "/services";
+    const isFinancingPage = location.pathname === "/financing";    
     const isAdmin = location.pathname.startsWith("/admin");
 
 
@@ -63,7 +62,7 @@ function Layout({ children, activeStep }) {
       <Header />
 
       {/* Stepper (only show on appointment flow routes) */}
-      {!isHomePage && !isContactPage && !isSignupPage && !isLoginPage && !isAccount && !isShop && !isWhyUsPage && !isFinancingPage && !isServicesPage && !isAdmin && <Stepper className="mt-4" activeStep={activeStep} />}
+      {!isHomePage && !isContactPage && !isSignupPage && !isLoginPage && !isAccount && !isShop && !isWhyUsPage && !isFinancingPage  && !isAdmin && <Stepper className="mt-4" activeStep={activeStep} />}
 
       {/* Animated Page Transition */}      <motion.main
         key={location.pathname} // Change animation on route change
